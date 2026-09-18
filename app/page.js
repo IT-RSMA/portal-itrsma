@@ -35,9 +35,9 @@ const services = [
   },
   {
     id: "task-manager",
-    title: "Task Manager IT",
+    title: "Task Manager",
     category: "task manager",
-    url: "tes", // Contoh web monitoring
+    url: "https://taskmanager-itrsma.netlify.app/",
     icon: Activity,
     embeddable: true,
     description: "Pantau kesehatan server database dan jaringan VPN RS."
@@ -108,7 +108,7 @@ export default function HospitalDashboard() {
 
         {/* Footer Sidebar */}
         <div className="p-4 border-t border-slate-800 text-xs text-slate-500 text-center">
-          &copy; {new Date().getFullYear()} IT Hospital Systems
+          &copy; {new Date().getFullYear()} TEAM IT RSMA
         </div>
       </aside>
 
@@ -122,7 +122,7 @@ export default function HospitalDashboard() {
               src={activeService.url}
               className="w-full h-full border-0"
               title={activeService.title}
-              sandbox="allow-same-origin allow-scripts allow-popups opacity-100"
+              sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox allow-modals allow-downloads allow-forms"
             />
           ) : (
             <div className="flex flex-col items-center justify-center h-full p-8 text-center">
